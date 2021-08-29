@@ -26,13 +26,15 @@ class FindGuitarTests: XCTestCase {
                                     backWood: .alder,
                                     topWood: .alder,
                                     numStrings: "0")
-        inventory.addGuitar(serialNumber: "V95693",
-                            price: 1499.95,
-                            guitarSpec: fenderGuiterSpec)
+        let guitar1 = Guitar(serialNumber: "V95693",
+                             price: 1499.95,
+                             guitarSpec: fenderGuiterSpec)
+        inventory.addGuitar(guitar1)
 
-        inventory.addGuitar(serialNumber: "V9512",
-                            price: 1549.95,
-                            guitarSpec: fenderGuiterSpec)
+        let guitar2 = Guitar(serialNumber: "V9512",
+                             price: 1549.95,
+                             guitarSpec: fenderGuiterSpec)
+        inventory.addGuitar(guitar2)
 
         let searchGuitar = inventory.searchGuitar(guitarSpec: fenderGuiterSpec)
         XCTAssertNotNil(searchGuitar)
@@ -46,13 +48,15 @@ class FindGuitarTests: XCTestCase {
                                     backWood: .alder,
                                     topWood: .alder,
                                     numStrings: "0")
-        inventory.addGuitar(serialNumber: "V95693",
-                            price: 1499.95,
-                            guitarSpec: fenderGuiterSpec)
+        let guitar1 = Guitar(serialNumber: "V95693",
+                             price: 1499.95,
+                             guitarSpec: fenderGuiterSpec)
+        inventory.addGuitar(guitar1)
 
-        inventory.addGuitar(serialNumber: "V9512",
-                            price: 1549.95,
-                            guitarSpec: fenderGuiterSpec)
+        let guitar2 = Guitar(serialNumber: "V9512",
+                             price: 1549.95,
+                             guitarSpec: fenderGuiterSpec)
+        inventory.addGuitar(guitar2)
 
         let searchGuitars = inventory.searchGuitars(guitarSpec: fenderGuiterSpec)
         XCTAssertFalse(searchGuitars.isEmpty)

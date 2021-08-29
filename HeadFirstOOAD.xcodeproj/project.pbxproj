@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3551F7AC26DB5CEA000B95F1 /* DogDoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3551F7AB26DB5CEA000B95F1 /* DogDoor.swift */; };
+		3551F7AE26DB5D8E000B95F1 /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3551F7AD26DB5D8E000B95F1 /* Remote.swift */; };
+		3551F7B126DB5E3D000B95F1 /* DogDoorSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3551F7B026DB5E3D000B95F1 /* DogDoorSimulator.swift */; };
 		358F859926C95D840032B711 /* FindGuitarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F859826C95D840032B711 /* FindGuitarTests.swift */; };
 		358F859F26C9654E0032B711 /* Guitar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F859E26C9654E0032B711 /* Guitar.swift */; };
 		358F85A126C965690032B711 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F85A026C965690032B711 /* Inventory.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3551F7AB26DB5CEA000B95F1 /* DogDoor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDoor.swift; sourceTree = "<group>"; };
+		3551F7AD26DB5D8E000B95F1 /* Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
+		3551F7B026DB5E3D000B95F1 /* DogDoorSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDoorSimulator.swift; sourceTree = "<group>"; };
 		358F859826C95D840032B711 /* FindGuitarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGuitarTests.swift; sourceTree = "<group>"; };
 		358F859E26C9654E0032B711 /* Guitar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guitar.swift; sourceTree = "<group>"; };
 		358F85A026C965690032B711 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
@@ -84,6 +90,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3551F7A826DB5CB4000B95F1 /* Guitar */ = {
+			isa = PBXGroup;
+			children = (
+				358F859E26C9654E0032B711 /* Guitar.swift */,
+				358F85A026C965690032B711 /* Inventory.swift */,
+				358F85A426C96B200032B711 /* GuitarSpec.swift */,
+			);
+			path = Guitar;
+			sourceTree = "<group>";
+		};
+		3551F7A926DB5CCD000B95F1 /* Guitar */ = {
+			isa = PBXGroup;
+			children = (
+				358F859826C95D840032B711 /* FindGuitarTests.swift */,
+			);
+			path = Guitar;
+			sourceTree = "<group>";
+		};
+		3551F7AA26DB5CD9000B95F1 /* Dog */ = {
+			isa = PBXGroup;
+			children = (
+				3551F7AB26DB5CEA000B95F1 /* DogDoor.swift */,
+				3551F7AD26DB5D8E000B95F1 /* Remote.swift */,
+			);
+			path = Dog;
+			sourceTree = "<group>";
+		};
+		3551F7AF26DB5E22000B95F1 /* Door */ = {
+			isa = PBXGroup;
+			children = (
+				3551F7B026DB5E3D000B95F1 /* DogDoorSimulator.swift */,
+			);
+			path = Door;
+			sourceTree = "<group>";
+		};
 		35F3EED226C956C800ABBE3A = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +148,8 @@
 		35F3EEDD26C956C800ABBE3A /* HeadFirstOOAD */ = {
 			isa = PBXGroup;
 			children = (
+				3551F7AA26DB5CD9000B95F1 /* Dog */,
+				3551F7A826DB5CB4000B95F1 /* Guitar */,
 				35F3EEDE26C956C800ABBE3A /* AppDelegate.swift */,
 				35F3EEE026C956C800ABBE3A /* SceneDelegate.swift */,
 				35F3EEE226C956C800ABBE3A /* ViewController.swift */,
@@ -114,9 +157,6 @@
 				35F3EEE726C956C900ABBE3A /* Assets.xcassets */,
 				35F3EEE926C956C900ABBE3A /* LaunchScreen.storyboard */,
 				35F3EEEC26C956C900ABBE3A /* Info.plist */,
-				358F859E26C9654E0032B711 /* Guitar.swift */,
-				358F85A026C965690032B711 /* Inventory.swift */,
-				358F85A426C96B200032B711 /* GuitarSpec.swift */,
 			);
 			path = HeadFirstOOAD;
 			sourceTree = "<group>";
@@ -124,9 +164,10 @@
 		35F3EEF426C956CA00ABBE3A /* HeadFirstOOADTests */ = {
 			isa = PBXGroup;
 			children = (
+				3551F7AF26DB5E22000B95F1 /* Door */,
+				3551F7A926DB5CCD000B95F1 /* Guitar */,
 				35F3EEF526C956CA00ABBE3A /* HeadFirstOOADTests.swift */,
 				35F3EEF726C956CA00ABBE3A /* Info.plist */,
-				358F859826C95D840032B711 /* FindGuitarTests.swift */,
 			);
 			path = HeadFirstOOADTests;
 			sourceTree = "<group>";
@@ -272,6 +313,8 @@
 			files = (
 				358F85A126C965690032B711 /* Inventory.swift in Sources */,
 				35F3EEE326C956C800ABBE3A /* ViewController.swift in Sources */,
+				3551F7AC26DB5CEA000B95F1 /* DogDoor.swift in Sources */,
+				3551F7AE26DB5D8E000B95F1 /* Remote.swift in Sources */,
 				358F85A526C96B200032B711 /* GuitarSpec.swift in Sources */,
 				35F3EEDF26C956C800ABBE3A /* AppDelegate.swift in Sources */,
 				35F3EEE126C956C800ABBE3A /* SceneDelegate.swift in Sources */,
@@ -284,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				358F859926C95D840032B711 /* FindGuitarTests.swift in Sources */,
+				3551F7B126DB5E3D000B95F1 /* DogDoorSimulator.swift in Sources */,
 				35F3EEF626C956CA00ABBE3A /* HeadFirstOOADTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

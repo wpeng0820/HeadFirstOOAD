@@ -14,13 +14,8 @@ class Inventory {
         self.guitars = [Guitar]()
     }
 
-    func addGuitar(serialNumber: String,
-                   price: Double,
-                   guitarSpec: GuitarSpec) {
-        let newGuitar = Guitar(serialNumber: serialNumber,
-                               price: price,
-                               guitarSpec: guitarSpec)
-        guitars.append(newGuitar)
+    func addGuitar(_ guitar: Guitar) {
+        guitars.append(guitar)
     }
 
     func getGuitar(serialNumber: String) -> Guitar {
