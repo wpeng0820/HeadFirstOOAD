@@ -20,55 +20,41 @@ class FindGuitarTests: XCTestCase {
 
     func testFindGuitar() {
         let inventory = Inventory()
-        inventory.addGuitar(serialNumber: "V95693",
-                            price: 1499.95,
-                            builder: .fender,
-                            model: "Stractocastor",
-                            type: .electric,
-                            backWood: .alder,
-                            topWood: .alder)
-
-        inventory.addGuitar(serialNumber: "V9512",
-                            price: 1549.95,
-                            builder: .fender,
-                            model: "Stractocastor",
-                            type: .electric,
-                            backWood: .alder,
-                            topWood: .alder)
-
-        let guiterSpec = GuitarSpec(builder: BuilderType.fender,
+        let fenderGuiterSpec = GuitarSpec(builder: .fender,
                                     model: "Stractocastor",
                                     type: .electric,
                                     backWood: .alder,
-                                    topWood: .alder)
-        let searchGuitar = inventory.searchGuitar(guitarSpec: guiterSpec)
+                                    topWood: .alder,
+                                    numStrings: "0")
+        inventory.addGuitar(serialNumber: "V95693",
+                            price: 1499.95,
+                            guitarSpec: fenderGuiterSpec)
+
+        inventory.addGuitar(serialNumber: "V9512",
+                            price: 1549.95,
+                            guitarSpec: fenderGuiterSpec)
+
+        let searchGuitar = inventory.searchGuitar(guitarSpec: fenderGuiterSpec)
         XCTAssertNotNil(searchGuitar)
     }
 
     func testFindGuitars() {
         let inventory = Inventory()
-        inventory.addGuitar(serialNumber: "V95693",
-                            price: 1499.95,
-                            builder: .fender,
-                            model: "Stractocastor",
-                            type: .electric,
-                            backWood: .alder,
-                            topWood: .alder)
-
-        inventory.addGuitar(serialNumber: "V9512",
-                            price: 1549.95,
-                            builder: .fender,
-                            model: "Stractocastor",
-                            type: .electric,
-                            backWood: .alder,
-                            topWood: .alder)
-
-        let guiterSpec = GuitarSpec(builder: BuilderType.fender,
+        let fenderGuiterSpec = GuitarSpec(builder: .fender,
                                     model: "Stractocastor",
                                     type: .electric,
                                     backWood: .alder,
-                                    topWood: .alder)
-        let searchGuitars = inventory.searchGuitars(guitarSpec: guiterSpec)
+                                    topWood: .alder,
+                                    numStrings: "0")
+        inventory.addGuitar(serialNumber: "V95693",
+                            price: 1499.95,
+                            guitarSpec: fenderGuiterSpec)
+
+        inventory.addGuitar(serialNumber: "V9512",
+                            price: 1549.95,
+                            guitarSpec: fenderGuiterSpec)
+
+        let searchGuitars = inventory.searchGuitars(guitarSpec: fenderGuiterSpec)
         XCTAssertFalse(searchGuitars.isEmpty)
     }
 }

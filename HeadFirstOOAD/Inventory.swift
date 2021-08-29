@@ -16,19 +16,10 @@ class Inventory {
 
     func addGuitar(serialNumber: String,
                    price: Double,
-                   builder: BuilderType,
-                   model: String,
-                   type: GuitarType,
-                   backWood: WoodType,
-                   topWood: WoodType) {
-        let guiterSpec = GuitarSpec(builder: builder,
-                                    model: model,
-                                    type: type,
-                                    backWood: backWood,
-                                    topWood: topWood)
+                   guitarSpec: GuitarSpec) {
         let newGuitar = Guitar(serialNumber: serialNumber,
                                price: price,
-                               guitarSpec: guiterSpec)
+                               guitarSpec: guitarSpec)
         guitars.append(newGuitar)
     }
 
@@ -37,46 +28,10 @@ class Inventory {
     }
 
     func searchGuitar(guitarSpec: GuitarSpec) -> Guitar? {
-        return (guitars.filter { item in
-            if item.guitarSpec.builder != guitarSpec.builder {
-                return false
-            }
-
-            let model = item.guitarSpec.model
-            if model != "" && model != guitarSpec.model {
-                return false
-            }
-
-            if item.guitarSpec.type != guitarSpec.type {
-                return false
-            }
-
-            if item.guitarSpec.topWood != guitarSpec.topWood {
-                return false
-            }
-            return true
-        }).first
+        return searchGuitars(guitarSpec: guitarSpec).first
     }
 
     func searchGuitars(guitarSpec: GuitarSpec) -> [Guitar] {
-        return (guitars.filter { item in
-            if item.guitarSpec.builder != guitarSpec.builder {
-                return false
-            }
-
-            let model = item.guitarSpec.model
-            if model != "" && model != guitarSpec.model {
-                return false
-            }
-
-            if item.guitarSpec.type != guitarSpec.type {
-                return false
-            }
-
-            if item.guitarSpec.topWood != guitarSpec.topWood {
-                return false
-            }
-            return true
-        })
+        return (guitars.filter { $0.guitarSpec.matches(guitarSpec) })
     }
 }
