@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3551F7AC26DB5CEA000B95F1 /* DogDoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3551F7AB26DB5CEA000B95F1 /* DogDoor.swift */; };
 		3551F7AE26DB5D8E000B95F1 /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3551F7AD26DB5D8E000B95F1 /* Remote.swift */; };
-		3551F7B126DB5E3D000B95F1 /* DogDoorSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3551F7B026DB5E3D000B95F1 /* DogDoorSimulator.swift */; };
+		357F6CE726DB67B8000FB97C /* RemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F6CE626DB67B8000FB97C /* RemoteTests.swift */; };
 		358F859926C95D840032B711 /* FindGuitarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F859826C95D840032B711 /* FindGuitarTests.swift */; };
 		358F859F26C9654E0032B711 /* Guitar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F859E26C9654E0032B711 /* Guitar.swift */; };
 		358F85A126C965690032B711 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F85A026C965690032B711 /* Inventory.swift */; };
@@ -44,7 +44,7 @@
 /* Begin PBXFileReference section */
 		3551F7AB26DB5CEA000B95F1 /* DogDoor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDoor.swift; sourceTree = "<group>"; };
 		3551F7AD26DB5D8E000B95F1 /* Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
-		3551F7B026DB5E3D000B95F1 /* DogDoorSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDoorSimulator.swift; sourceTree = "<group>"; };
+		357F6CE626DB67B8000FB97C /* RemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTests.swift; sourceTree = "<group>"; };
 		358F859826C95D840032B711 /* FindGuitarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGuitarTests.swift; sourceTree = "<group>"; };
 		358F859E26C9654E0032B711 /* Guitar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guitar.swift; sourceTree = "<group>"; };
 		358F85A026C965690032B711 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		3551F7AF26DB5E22000B95F1 /* Door */ = {
 			isa = PBXGroup;
 			children = (
-				3551F7B026DB5E3D000B95F1 /* DogDoorSimulator.swift */,
+				357F6CE626DB67B8000FB97C /* RemoteTests.swift */,
 			);
 			path = Door;
 			sourceTree = "<group>";
@@ -327,7 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				358F859926C95D840032B711 /* FindGuitarTests.swift in Sources */,
-				3551F7B126DB5E3D000B95F1 /* DogDoorSimulator.swift in Sources */,
+				357F6CE726DB67B8000FB97C /* RemoteTests.swift in Sources */,
 				35F3EEF626C956CA00ABBE3A /* HeadFirstOOADTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
