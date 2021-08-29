@@ -31,12 +31,36 @@ class FindGuitarTests: XCTestCase {
 
         let whatErinkLikes = Guitar(serialNumber: "",
                                        price: 0.0,
-                                       builder: "Fender",
+                                       builder: "fender",
                                        model: "Stractocastor",
                                        type: "electric",
                                        backWood: "Alder",
                                        topWood: "Alder")
         let searchGuitar = inventory.searchGuitar(guitar: whatErinkLikes)
         XCTAssertNotNil(searchGuitar)
+    }
+
+    // We might typo with string lead to search wrong
+    func testFindGuitarFailure() {
+        let inventory = Inventory()
+        inventory.addGuitar(serialNumber: "V95693",
+                            price: 1499.95,
+                            builder: "fender",
+                            model: "Stractocastor",
+                            type: "electric",
+                            backWood: "Alder",
+                            topWood: "Alder")
+        // add Guitar
+
+        let whatErinkLikes = Guitar(serialNumber: "",
+                                       price: 0.0,
+                                       builder: "Fender",
+                                       model: "Stractocastor",
+                                       type: "electric",
+                                       backWood: "Alder",
+                                       topWood: "Alder")
+        let searchGuitar = inventory.searchGuitar(guitar: whatErinkLikes)
+        // The error reason is builder's name doesn't be compared becasue one is lower and another one is capital
+        XCTAssertNil(searchGuitar)
     }
 }
