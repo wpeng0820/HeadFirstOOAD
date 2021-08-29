@@ -22,45 +22,57 @@ class FindGuitarTests: XCTestCase {
         let inventory = Inventory()
         inventory.addGuitar(serialNumber: "V95693",
                             price: 1499.95,
-                            builder: "fender",
+                            builder: .fender,
                             model: "Stractocastor",
-                            type: "electric",
-                            backWood: "Alder",
-                            topWood: "Alder")
-        // add Guitar
+                            type: .electric,
+                            backWood: .alder,
+                            topWood: .alder)
+
+        inventory.addGuitar(serialNumber: "V9512",
+                            price: 1549.95,
+                            builder: .fender,
+                            model: "Stractocastor",
+                            type: .electric,
+                            backWood: .alder,
+                            topWood: .alder)
 
         let whatErinkLikes = Guitar(serialNumber: "",
-                                       price: 0.0,
-                                       builder: "fender",
-                                       model: "Stractocastor",
-                                       type: "electric",
-                                       backWood: "Alder",
-                                       topWood: "Alder")
+                                    price: 0.0,
+                                    builder: BuilderType.fender,
+                                    model: "Stractocastor",
+                                    type: .electric,
+                                    backWood: .alder,
+                                    topWood: .alder)
         let searchGuitar = inventory.searchGuitar(guitar: whatErinkLikes)
         XCTAssertNotNil(searchGuitar)
     }
 
-    // We might typo with string lead to search wrong
-    func testFindGuitarFailure() {
+    func testFindGuitars() {
         let inventory = Inventory()
         inventory.addGuitar(serialNumber: "V95693",
                             price: 1499.95,
-                            builder: "fender",
+                            builder: .fender,
                             model: "Stractocastor",
-                            type: "electric",
-                            backWood: "Alder",
-                            topWood: "Alder")
-        // add Guitar
+                            type: .electric,
+                            backWood: .alder,
+                            topWood: .alder)
+
+        inventory.addGuitar(serialNumber: "V9512",
+                            price: 1549.95,
+                            builder: .fender,
+                            model: "Stractocastor",
+                            type: .electric,
+                            backWood: .alder,
+                            topWood: .alder)
 
         let whatErinkLikes = Guitar(serialNumber: "",
-                                       price: 0.0,
-                                       builder: "Fender",
-                                       model: "Stractocastor",
-                                       type: "electric",
-                                       backWood: "Alder",
-                                       topWood: "Alder")
-        let searchGuitar = inventory.searchGuitar(guitar: whatErinkLikes)
-        // The error reason is builder's name doesn't be compared becasue one is lower and another one is capital
-        XCTAssertNil(searchGuitar)
+                                    price: 0.0,
+                                    builder: BuilderType.fender,
+                                    model: "Stractocastor",
+                                    type: .electric,
+                                    backWood: .alder,
+                                    topWood: .alder)
+        let searchGuitars = inventory.searchGuitars(guitar: whatErinkLikes)
+        XCTAssertFalse(searchGuitars.isEmpty)
     }
 }

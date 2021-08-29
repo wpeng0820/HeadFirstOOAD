@@ -16,18 +16,18 @@ class Inventory {
 
     func addGuitar(serialNumber: String,
                    price: Double,
-                   builder: String,
+                   builder: BuilderType,
                    model: String,
-                   type: String,
-                   backWood: String,
-                   topWood: String) {
+                   type: GuitarType,
+                   backWood: WoodType,
+                   topWood: WoodType) {
         let newGuitar = Guitar(serialNumber: serialNumber,
-                                  price: price,
-                                  builder: builder,
-                                  model: model,
-                                  type: type,
-                                  backWood: backWood,
-                                  topWood: topWood)
+                               price: price,
+                               builder: builder,
+                               model: model,
+                               type: type,
+                               backWood: backWood,
+                               topWood: topWood)
         guitars.append(newGuitar)
     }
 
@@ -37,8 +37,7 @@ class Inventory {
 
     func searchGuitar(guitar: Guitar) -> Guitar? {
         return (guitars.filter { item in
-            let builder = item.builder
-            if builder != "" && builder != guitar.builder {
+            if item.builder != guitar.builder {
                 return false
             }
 
@@ -47,16 +46,36 @@ class Inventory {
                 return false
             }
 
-            let type = item.type
-            if type != "" && type != guitar.type {
+            if item.type != guitar.type {
                 return false
             }
 
-            let topWood = item.topWood
-            if topWood != "" && topWood != guitar.topWood {
+            if item.topWood != guitar.topWood {
                 return false
             }
             return true
         }).first
+    }
+
+    func searchGuitars(guitar: Guitar) -> [Guitar] {
+        return (guitars.filter { item in
+            if item.builder != guitar.builder {
+                return false
+            }
+
+            let model = item.model
+            if model != "" && model != guitar.model {
+                return false
+            }
+
+            if item.type != guitar.type {
+                return false
+            }
+
+            if item.topWood != guitar.topWood {
+                return false
+            }
+            return true
+        })
     }
 }
