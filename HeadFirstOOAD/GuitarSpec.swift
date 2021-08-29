@@ -8,5 +8,9 @@
 import Foundation
 
 struct GuitarSpec {
-
+    private(set) var builder: BuilderType
+    private(set) var model: String
+    private(set) var type: GuitarType
+    private(set) var backWood: WoodType
+    private(set) var topWood: WoodType
 }

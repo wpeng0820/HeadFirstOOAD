@@ -36,14 +36,12 @@ class FindGuitarTests: XCTestCase {
                             backWood: .alder,
                             topWood: .alder)
 
-        let whatErinkLikes = Guitar(serialNumber: "",
-                                    price: 0.0,
-                                    builder: BuilderType.fender,
+        let guiterSpec = GuitarSpec(builder: BuilderType.fender,
                                     model: "Stractocastor",
                                     type: .electric,
                                     backWood: .alder,
                                     topWood: .alder)
-        let searchGuitar = inventory.searchGuitar(guitar: whatErinkLikes)
+        let searchGuitar = inventory.searchGuitar(guitarSpec: guiterSpec)
         XCTAssertNotNil(searchGuitar)
     }
 
@@ -65,14 +63,12 @@ class FindGuitarTests: XCTestCase {
                             backWood: .alder,
                             topWood: .alder)
 
-        let whatErinkLikes = Guitar(serialNumber: "",
-                                    price: 0.0,
-                                    builder: BuilderType.fender,
+        let guiterSpec = GuitarSpec(builder: BuilderType.fender,
                                     model: "Stractocastor",
                                     type: .electric,
                                     backWood: .alder,
                                     topWood: .alder)
-        let searchGuitars = inventory.searchGuitars(guitar: whatErinkLikes)
+        let searchGuitars = inventory.searchGuitars(guitarSpec: guiterSpec)
         XCTAssertFalse(searchGuitars.isEmpty)
     }
 }

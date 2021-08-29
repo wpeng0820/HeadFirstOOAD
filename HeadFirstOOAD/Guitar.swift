@@ -38,9 +38,5 @@ enum WoodType: String {
 struct Guitar {
     private(set) var serialNumber: String
     private(set) var price: Double
-    private(set) var builder: BuilderType
-    private(set) var model: String
-    private(set) var type: GuitarType
-    private(set) var backWood: WoodType
-    private(set) var topWood: WoodType
+    private(set) var guitarSpec: GuitarSpec
 }
