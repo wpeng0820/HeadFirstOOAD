@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3551F7AC26DB5CEA000B95F1 /* DogDoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3551F7AB26DB5CEA000B95F1 /* DogDoor.swift */; };
 		3551F7AE26DB5D8E000B95F1 /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3551F7AD26DB5D8E000B95F1 /* Remote.swift */; };
+		356E5A632708907300B9F500 /* BarkRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E5A622708907300B9F500 /* BarkRecognizer.swift */; };
 		357F6CE726DB67B8000FB97C /* RemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F6CE626DB67B8000FB97C /* RemoteTests.swift */; };
 		358F859926C95D840032B711 /* FindGuitarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F859826C95D840032B711 /* FindGuitarTests.swift */; };
 		358F859F26C9654E0032B711 /* Guitar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358F859E26C9654E0032B711 /* Guitar.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		3551F7AB26DB5CEA000B95F1 /* DogDoor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDoor.swift; sourceTree = "<group>"; };
 		3551F7AD26DB5D8E000B95F1 /* Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remote.swift; sourceTree = "<group>"; };
+		356E5A622708907300B9F500 /* BarkRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarkRecognizer.swift; sourceTree = "<group>"; };
 		357F6CE626DB67B8000FB97C /* RemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTests.swift; sourceTree = "<group>"; };
 		358F859826C95D840032B711 /* FindGuitarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGuitarTests.swift; sourceTree = "<group>"; };
 		358F859E26C9654E0032B711 /* Guitar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guitar.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				3551F7AB26DB5CEA000B95F1 /* DogDoor.swift */,
 				3551F7AD26DB5D8E000B95F1 /* Remote.swift */,
+				356E5A622708907300B9F500 /* BarkRecognizer.swift */,
 			);
 			path = Dog;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				35F3EEDF26C956C800ABBE3A /* AppDelegate.swift in Sources */,
 				35F3EEE126C956C800ABBE3A /* SceneDelegate.swift in Sources */,
 				358F859F26C9654E0032B711 /* Guitar.swift in Sources */,
+				356E5A632708907300B9F500 /* BarkRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
